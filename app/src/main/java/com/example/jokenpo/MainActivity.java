@@ -18,20 +18,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void selecionado_pedra(View view){
-        this.opcao_selecionada("Pedra");
+        this.opcao_selecionada("pedra");
     }
 
     public void selecionado_papel(View view){
-        this.opcao_selecionada("Papel");
+        this.opcao_selecionada("papel");
     }
     public void selecionado_tesoura(View view){
-        this.opcao_selecionada("Tesoura");
+        this.opcao_selecionada("tesoura");
     }
 
     public void opcao_selecionada(String opcaoSelecionada){
 
-        ImageView imageResultado = findViewById(R.id.imageResultado);
-        TextView textResultado = findViewById(R.id.textresultado);
+        ImageView imageResultadoMaquina = findViewById(R.id.JogadaM);
+        ImageView imageResultadoPlayer = findViewById(R.id.JogadaP);
+        TextView textResultado = findViewById(R.id.textResultado);
 
         int escolha_maquina = new Random().nextInt(3);
         String[] opcoes= {"pedra", "papel", "tespura"};
@@ -39,16 +40,28 @@ public class MainActivity extends AppCompatActivity {
 
         switch (opcoes_maquina) {
             case "pedra":
-                imageResultado.setImageResource(R.drawable.pedra);
+                imageResultadoMaquina.setImageResource(R.drawable.pedra);
                 break;
             case "papel":
-                imageResultado.setImageResource(R.drawable.papel);
+                imageResultadoMaquina.setImageResource(R.drawable.papel);
                 break;
             case "tesoura":
-                imageResultado.setImageResource(R.drawable.tesoura);
+                imageResultadoMaquina.setImageResource(R.drawable.tesoura);
                 break;
         }
 
+
+        switch (opcaoSelecionada) {
+            case "pedra":
+                imageResultadoPlayer.setImageResource(R.drawable.pedra);
+                break;
+            case "papel":
+                imageResultadoPlayer.setImageResource(R.drawable.papel);
+                break;
+            case "tesoura":
+                imageResultadoPlayer.setImageResource(R.drawable.tesoura);
+                break;
+        }
 
         if((opcoes_maquina == "tesoura" && opcaoSelecionada == "papel") ||
            (opcoes_maquina == "papel" && opcaoSelecionada == "pedra") ||
