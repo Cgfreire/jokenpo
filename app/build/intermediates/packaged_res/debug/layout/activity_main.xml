@@ -12,6 +12,7 @@
         android:layout_height="100dp"
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pedra" />
@@ -31,9 +32,10 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/papel"
-        tools:layout_editor_absoluteX="148dp" />
+        app:srcCompat="@drawable/papel" />
 
     <TextView
         android:id="@+id/textResultado"
@@ -41,26 +43,30 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Faça sua Jogada !"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        tools:layout_editor_absoluteX="148dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <ImageView
         android:id="@+id/JogadaP"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:layout_marginStart="60dp"
         android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textResultado"
-        app:srcCompat="@drawable/padrao"
-        tools:layout_editor_absoluteX="74dp" />
+        app:srcCompat="@drawable/padrao" />
 
     <ImageView
         android:id="@+id/JogadaM"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toEndOf="@+id/JogadaP"
         app:layout_constraintTop_toBottomOf="@+id/textResultado"
-        app:srcCompat="@drawable/padrao"
-        tools:layout_editor_absoluteX="248dp" />
+        app:srcCompat="@drawable/padrao" />
 
     <TextView
         android:id="@+id/textView2"
@@ -68,16 +74,19 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="Sua Jogada"
-        app:layout_constraintTop_toBottomOf="@+id/JogadaP"
-        tools:layout_editor_absoluteX="88dp" />
+        app:layout_constraintEnd_toStartOf="@+id/textView3"
+        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/JogadaP" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:layout_marginEnd="96dp"
         android:text="Jogada PC"
-        app:layout_constraintTop_toBottomOf="@+id/JogadaM"
-        tools:layout_editor_absoluteX="262dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/JogadaM" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
