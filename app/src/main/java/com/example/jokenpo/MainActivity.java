@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     public void selecionado_pedra(View view){
         this.opcao_selecionada("pedra");
     }
-
     public void selecionado_papel(View view){
         this.opcao_selecionada("papel");
     }
